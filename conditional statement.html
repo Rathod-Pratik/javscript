@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional statement in php</title>
+</head>
+
+<body>
+    <script>
+        // If statement
+        let num = 10;
+        if (num > 0) {
+            console.log("Number is positive");
+        }
+
+        // If-else statement
+        let temperature = 25;
+        if (temperature >= 30) {
+            console.log("It's hot outside!");
+        } else {
+            console.log("It's not too hot outside.");
+        }
+
+        // If-else if statement
+        let score = 85;
+        if (score >= 90) {
+            console.log("Excellent! You scored an A.");
+        } else if (score >= 80) {
+            console.log("Well done! You scored a B.");
+        } else if (score >= 70) {
+            console.log("Good job! You scored a C.");
+        } else {
+            console.log("You need to study more. You scored below a C.");
+        }
+
+        // Switch case statement
+        let day = "Monday";
+        switch (day) {
+            case "Monday":
+                console.log("monday");
+                break;
+            case "Tuesday":
+                console.log("Tuesday");
+                break;
+            case "Wednesday":
+                console.log("Wednesday");
+                break;
+            case "Thursday":
+                console.log("Thursday");
+                break;
+            case "Friday":
+                console.log("Friday");
+                break;
+            case "Saturday":
+                console.log("saturday");
+                break
+            case "Sunday":
+                console.log("sunday");
+                break;
+            default:
+                console.log("Invalid day.");
+        }
+
+    </script>
+</body>
+
+</html>

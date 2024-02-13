@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop statement</title>
+</head>
+
+<body>
+    <script>
+        // For loop
+        console.log("For Loop:");
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // While loop
+        console.log("\nWhile Loop:");
+        let j = 0;
+        while (j < 5) {
+            console.log(j);
+            j++;
+        }
+
+        // Do-while loop
+        console.log("\nDo-While Loop:");
+        let k = 0;
+        do {
+            console.log(k);
+            k++;
+        } while (k < 5);
+
+        // For...in loop (looping through object properties)
+        console.log("\nFor...in Loop:");
+        const person = {
+            name: 'Rathod Pratik',
+            age: 19,
+            city: 'Veraval'
+        };
+        for (const key in person) {
+            console.log(`${key}: ${person[key]}`);
+        }
+
+
+        //for...of loop(Array)
+        console.log("\nFor...of Loop:");
+
+        const colors = ['red', 'green', 'blue'];
+
+        for (const color of colors) {
+            console.log(color);
+        }
+
+    </script>
+</body>
+
+</html>

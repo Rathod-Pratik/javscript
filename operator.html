@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator in php</title>
+</head>
+
+<body>
+    <script>
+        // Arithmetic operators
+        let a = 10;
+        let b = 5;
+        let result;
+
+        result = a + b; // Addition
+        result -= b;    // Subtraction
+        result *= 2;    // Multiplication
+        result /= 2;    // Division
+        result %= 3;    // Modulus
+        result++;       // Increment
+        result--;       // Decrement
+
+        // Assignment operators
+        let x = 10;
+        let y = 5;
+        x += y; // x = x + y
+        y -= 3; // y = y - 3
+        x *= 2; // x = x * 2
+        y /= 2; // y = y / 2
+        x %= 3; // x = x % 3
+
+        // Logical operators
+        let p = true;
+        let q = false;
+        let andResult = p && q; // Logical AND
+        let orResult = p || q;  // Logical OR
+        let notResult = !p;     // Logical NOT
+
+        // Comparison operators
+        let num1 = 10;
+        let num2 = 5;
+        let isEqual = num1 == num2;   // Equal to
+        let isNotEqual = num1 != num2; // Not equal to
+        let isGreater = num1 > num2;   // Greater than
+        let isLess = num1 < num2;      // Less than
+        let isGreaterOrEqual = num1 >= num2; // Greater than or equal to
+        let isLessOrEqual = num1 <= num2;    // Less than or equal to
+
+        // Conditional operator
+        let condition = (num1 > num2) ? "Num1 is greater" : "Num2 is greater";
+
+        console.log("Arithmetic Result:", result);
+        console.log("Logical AND Result:", andResult);
+        console.log("Logical OR Result:", orResult);
+        console.log("Logical NOT Result:", notResult);
+        console.log("Comparison Result:", isEqual);
+        console.log("Conditional Result:", condition);
+
+    </script>
+</body>
+
+</html>

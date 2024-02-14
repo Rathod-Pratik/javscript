@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+
+<body>
+    <script>
+        //use for convert in to string
+        let a = [1, 2, 3, 4, 5];
+        console.log(a.toString());
+
+        //use for join array
+        let b = [1, 2, 3, 4, 5];
+        console.log(b.join("-"));
+
+        //remove last element of array
+        let c = [1, 2, 3, 4, 5];
+        c.pop();
+        console.log(c);
+
+        //add last element of array
+        let d = [1, 2, 3, 4, 5];
+        d.push(6);
+        console.log(d);
+
+        //remove first element of array
+        let e = [1, 2, 3, 4, 5];
+        e.shift();
+        console.log(e);
+
+        //add element in first
+        let f = [1, 2, 3, 4, 5];
+        e.unshift(0);
+        console.log(f);
+
+        //delete element in array
+        let g = [1, 2, 3, 4, 5];
+        delete g[2];
+        console.log(g);
+
+        //concate array
+        let h1 = [1, 2, 3, 4, 5];
+        let h2 = [6, 7, 8, 9, 10];
+        console.log(h1.concat(h2));
+
+        //use for sort array
+        let i = [4, 2, 1, 5, 3];
+        console.log(i.sort());
+
+        //use for splice array
+        let j = [1, 2, 3, 4, 5];
+        j.splice(5, 2, 6, 7);
+        console.log(j);
+
+        //use for slice array
+        let k = [1, 2, 3, 4, 5];
+        console.log(k.slice(1, 3));
+
+        // use for reverse array
+        let l = [1, 2, 3, 4, 5];
+        console.log(l.reverse());
+    </script>
+</body>
+
+</html>

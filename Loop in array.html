@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop in array</title>
+</head>
+<body>
+    <script>
+        //use for make array from object
+        a="Hello world";
+        console.log(Array.from(a));
+
+        //use for operation on elements of array
+        let b=[1,2,3,4,5];
+        function devide(a,b){
+            return a*a;
+        }
+        let b1=b.map(devide);
+        console.log(b1);
+        
+        //use for filter value in array
+        let c=[1,2,3,4,5];
+        function reduce(a,b){
+            return a>1;
+        }
+        let c1=c.filter(reduce);
+        console.log(c1);
+
+
+        //use for combine all value in one value
+        let d=[1,2,3,4,5];
+        function combine(a,b) {
+            return a*b;
+        }
+        let d2=d.reduce(combine);
+        console.log(d2);
+    </script>
+</body>
+</html>

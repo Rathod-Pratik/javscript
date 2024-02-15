@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child element</title>
+</head>
+<body>
+    <h1>childnodes</h1>
+    <p>The children property returns a collection of an element's child elements. The children property returns an HTMLCollection object.</p>
+    <script>
+        //three type of nodes
+        // 1. text Node
+        // 2. element Node
+        // 3. comment node
+
+        console.log(document.body.firstChild);    //text node is first child in body
+        console.log(document.body.lastChild);      //elemnt nodes is last child in body(script)
+        console.log(document.body.childNodes);     //show all nodes in body
+    </script>
+</body>
+</html>

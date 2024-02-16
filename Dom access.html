@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom accessing using javascript</title>
+</head>
+
+<body>
+    <p class="para blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellendus laborum rerum aliquid
+        totam officiis</p>
+
+    <h3 id="color" class="blue">Hello world</h3>
+
+    <h3 class="bgblue blue">Hello world</h3>
+
+    <h3 class="blue">Hello world</h3>
+
+    Enter your name: <input type="text" name="username">
+
+    <script>
+        // Accessing using ID
+        let a = document.getElementById('color');
+        a.style.backgroundColor = "cyan";
+
+        // Accessing using class
+        let b = document.getElementsByClassName('bgblue');
+        b[0].style.backgroundColor = "pink";
+
+        // Accessing using tag name
+        let c = document.getElementsByTagName('h3');
+        c[2].style.color = "brown";
+
+        // Accessing using name
+        let d = document.getElementsByName('username');
+        for (let i = 0; i < d.length; i++) {
+            d[i].style.borderColor = 'blue';
+        }
+
+        // Accessing using class
+        let e = document.querySelector('.para');
+        e.style.color = "blue";
+
+        // Accessing using class or ID
+        //use foreach in quertselectorall
+        let f = document.querySelectorAll('.blue');
+        f.forEach(function (element) {
+            element.style.borderColor = "brown";
+        });
+    </script>
+
+
+    </script>
+</body>
+
+</html>

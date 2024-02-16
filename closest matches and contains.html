@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closest , matches and contains method</title>
+</head>
+<body>
+    <span class="c2" id="sp1">hello world <span id="sp3">sp</span></span>
+    <span class="c2" id="sp2">hello world </span>
+    <script>
+        //use of matches
+        let a=document.getElementById('sp1');   //if class is matchs return true
+        console.log(a.matches('.class'));   //false
+        console.log(a.matches('.c2'));      //true
+
+
+        //use of colsest
+        let b=document.getElementById('sp3');
+        console.log(b.closest('#sp1'));  //close class is sp1 or not
+
+
+        //use of contains
+        let c=document.getElementById('sp1');//one element in other element
+        console.log(c.contains(sp3));//true
+        console.log(c.contains(sp1));//true
+        console.log(c.contains(sp2));//false
+    </script>
+</body>
+</html>

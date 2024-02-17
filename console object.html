@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <h3>hello world</h3>
     <script>
         //if condition is false the assert will be run
         a = 5;
@@ -45,6 +46,11 @@
         };
 
         console.dir(Mobile);
+        //only for element node
+        console.dir(document.body.firstElementChild.textContent);
+        console.dir(document.body.firstElementChild.nodeValue);
+        //working for all node
+        console.dir(document.body.firstElementChild.nodeName);  
 
     </script>
 </body>

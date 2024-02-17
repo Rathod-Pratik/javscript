@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML and outerHTML</title>
+</head>
+<body>
+    <h3 id="first">hello world</h3>
+    <p id="second">Lorem ipsum dolor sit amet consectetur<b> adipisicing elit.</b> Dolor, aperiam?</p>
+    <p id="thired" hidden>i am hidden property</p>
+    <script>
+        // use of innerHTML
+        //element select their content only
+        console.log(first.innerHTML);
+        console.log(first.innerHTML="Hello india"); //edit text
+
+        // use of outerHTML 
+        //element select him self
+        console.log(second.outerHTML);
+        console.log(second.outerHTML="this is edited text using outerHTML");
+
+
+        //remove hidden property
+        thired.hidden=false;
+
+       
+    </script>
+</body>
+</html>

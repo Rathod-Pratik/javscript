@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute method</title>
+</head>
+
+<body>
+    <h3 class="containar" id="first">hello world</h3>
+    <p class="second">i am second</p>
+    <p class="thired" hidden>I am thired</p>
+    <marquee id="fourth" behavior="alternate" direction="left" height="100" width="100">i am marquee</marquee>
+    <h4 id="fifth" data-Bgmi="battleground mobile inda" data-free="Free fire">i am personal attribute</h4>
+    <script>
+        let a = document.getElementById('first');
+        //hasAttribute to check attribute
+        console.log(a.hasAttribute("class"));       //true
+        console.log(a.hasAttribute("style"));       //false
+
+        //getAttribute to get value of attribute
+        console.log(a.getAttribute('class'));       //containar
+        console.log(a.getAttribute('id'));          //first
+
+        //setAttribute to set attribute
+        let b = document.body.getElementsByClassName('second')[0];
+        b.setAttribute("hidden", "true") //set attribute to hidden
+
+        //removeAttribute to remove attribute
+        let c = document.body.getElementsByClassName('thired')[0];
+        c.removeAttribute("hidden");     //remove hidden property
+
+        //attributes
+        let d = document.getElementById('fourth');
+        console.log(d.attributes); //get all element of id
+
+        //make personal attribute using data
+        let e=document.getElementById('fifth');
+        console.log(e.dataset);             //get all dataset in element
+        console.log(e.dataset.bgmi);        //get Attribute value
+        console.log(e.dataset.free);        //get Attribute value
+    </script>
+</body>
+
+</html>

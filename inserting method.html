@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting method</title>
+</head>
+
+<body>
+    start
+    <div class="containar">
+        i am start of containar
+        <div class="first">i am div</div>
+        i am end of containar
+    </div>
+    end
+    <script>
+        let a = document.body.getElementsByTagName('div')[0];
+
+        //insert element
+        let div = document.createElement('div');
+        div.innerHTML = "<h2>Hello world</h2>";
+        //  a.append(div);          //end of containar
+        //  a.prepend(div);         //start of containar
+        //  a.before(div);          //outer containar at the start
+        //  a.after(div);            //onter containar at the end
+        // a.replaceWith(div);       //replace with containar
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>className and classList</title>
+    <style>
+      
+        .dark{
+            border: 2px solid rgb(123, 117, 117);
+        }
+        .red{
+          border:2px solid red;
+        }
+        .blue{
+            border:2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="red">Hello world</div>
+    <script>
+
+        //use of className
+         let a=document.getElementById('first')
+        // a.className="red";
+
+        //class list
+        a.classList.add("blue");     //use for add class
+        a.classList.toggle("blue");  //if class is already added it will be remove
+        a.classList.contains("red");  //use for check class
+        a.classList.remove("red");     //use for remove class
+    </script>
+</body>
+</html>

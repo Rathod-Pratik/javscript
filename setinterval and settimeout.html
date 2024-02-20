@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval and setimeout</title>
+</head>
+
+<body>
+    <script>
+      function sum(a,b){
+        let c=a+b;
+        alert("i am setinterval");
+      }
+      function timeout(){
+        alert("i am settimeout");
+      }
+
+      let Timeout=setTimeout(timeout,2000); //settimeout run onetime
+      clearTimeout(Timeout);//use to clear setTimeout
+
+      
+      let interval=setInterval(sum,3000,500,70);//setinterval runinfinite time
+      clearInterval(interval);//use to clear setInterval
+
+    </script>
+</body>
+
+</html>

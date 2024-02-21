@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventListner</title>
+</head>
+
+<body>
+    <button id="me">submit</button>
+    <script>
+       function fun1(){
+        alert('i am alert in function 1');
+       }
+       function fun2(a){
+        console.log(a); //value of a
+        console.log(a.type);  //type of event
+        console.log(a.target);  //return element
+        console.log(a.clientX);  //return coordinate of X 
+        console.log(a.clientY);  //return coordinate of Y
+         alert('i am alert in function 2');
+       }
+        let a = document.getElementById('me');
+        //use of event listner
+        a.addEventListener('click', fun1);
+        a.addEventListener('click',fun2);
+
+        //remove event listner
+        a.removeEventListener('click',fun1);
+    </script>
+</body>
+
+</html>

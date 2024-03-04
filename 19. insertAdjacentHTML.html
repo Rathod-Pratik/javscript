@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>insertAdjacentHTML</title>
+</head>
+<body>
+
+<div id="targetElement">
+  i am target element
+</div>
+<div id="delete">
+i am delete
+</div>
+<script>
+// Get the target element
+let target = document.getElementById("targetElement");
+
+// Insert HTML before the target element
+target.insertAdjacentHTML('beforebegin', '<p>this is beforebegin</p>');
+
+// Insert HTML at the beginning of the target element's content
+target.insertAdjacentHTML('afterbegin', '<p>this is afterbegin</p>');
+
+// Insert HTML at the end of the target element's content
+target.insertAdjacentHTML('beforeend', '<p>this is beforeend</p>');
+
+// Insert HTML after the target element
+target.insertAdjacentHTML('afterend', '<p>this is afterend</p>');
+
+let elementToRemove = document.getElementById("delete");
+// Remove the element
+ elementToRemove.remove();
+</script>
+</body>
+</html>

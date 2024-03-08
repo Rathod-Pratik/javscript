@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            console.log("i am first");
+        }, 2000);
+        
+        console.log("i am second");
+
+        //write promise resolve with value 45 
+        // resolve and reject are syntex
+        let promise = new Promise(function (resolve, reject) {
+            console.log("i am thired");
+            resolve(45);
+        })
+
+        
+        //use to print status
+        console.log(promise);
+    
+        console.log('i am fouth');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>then and catch</title>
+</head>
+
+<body>
+
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            console.log("i am promise in p1");
+            setTimeout(() => {
+                resolve(true);
+            }, 5000);
+        })
+        let p2 = new Promise((resolve, reject) => {
+            console.log("i am promise in p2");
+            setTimeout(() => {
+                reject(false);
+            }, 5000);
+        })
+
+        console.log(p1, p2);
+
+        //use then
+        p1.then((value) => {
+            console.log(value);
+        })
+
+        //using catch
+        p2.catch((error) => {
+            console.log("mayur sir send this error");
+        });
+
+        //if we want to not use .catch
+        p2.then((value) => {
+            console.log(value);
+        }, (error) => {
+            console.log("i am error");
+        }); 
+    </script>
+</body>
+
+</html>

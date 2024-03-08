@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pyramid of doom</title>
+</head>
+
+<body>
+    <script>
+        function loadscript(src, Callback) {
+            let script = document.createElement('script');
+            script.src = src;
+            script.onload = () => Callback(null, script);
+            script.onerror = () => Callback(new Error('i am handle this error'));
+            document.head.append(script);
+        }
+
+//pyramid of doom is call function inner function.
+//if we have at list 2 callback we can use it otherwise we must promise 
+//it is diffecult to manage it. 
+        loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j123s', function loadscript1(error, src) {
+            if (error) {
+                console.log("error is here bro " + error);
+            }
+            loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j123s', function loadscript1(error, src) {
+                if (error) {
+                    console.log("error is here bro " + error);
+                }
+                loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j123s', function loadscript1(error, src) {
+                    if (error) {
+                        console.log("error is here bro " + error);
+                    }
+                    loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j123s', function loadscript1(error, src) {
+                        if (error) {
+                            console.log("error is here bro " + error);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

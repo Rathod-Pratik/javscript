@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    <script>
+        function loadscript(src,Callback){
+            let script=document.createElement('script');
+            script.src=src;
+            script.onload=()=>Callback(null,script);
+            script.onerror=()=> Callback(new Error('Rathod Pratik wrote this error'));
+            document.head.append(script);
+        }
+        loadscript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.j123s',function fun1(error,src){
+            if(error){
+                console.error("moya moya "+error);
+            }
+            else{
+                console.log("script loaded successfully");
+            }
+        })
+    </script>
+</body>
+</html>

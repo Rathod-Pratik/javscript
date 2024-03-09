@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise chaining</title>
+</head>
+
+<body>
+    <script>
+        let fun = new Promise((resolve, reject) => {
+            console.log("function one is loaded");
+            setTimeout(() => {
+                console.log("i am first");
+                resolve(45);
+            }, 2000);
+        })
+
+
+        //
+        fun.then((value) => {
+            console.log("i am first in then");
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    console.log("i am resolve after 2 seconds in then");
+                    resolve("i am resolve");
+                },2000);
+            })
+        }).then(() => {
+            console.log("i am last");
+        }).then(()=>{
+            console.log("this is final last");
+        })
+
+
+
+        console.log(fun);
+    </script>
+</body>
+
+</html>

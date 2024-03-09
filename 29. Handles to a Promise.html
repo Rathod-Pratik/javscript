@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handles to a promise</title>
+</head>
+
+<body>
+    <script>
+        
+        let fun = new Promise((resolve, reject) => {
+            console.log("i am not fullfield");
+            setTimeout(() => {
+                console.log("i am fullfiled");
+                resolve(45);
+            }, 5000);
+        })
+
+        //print resolve value
+        fun.then((value) => {
+            console.log(value);
+        })
+
+        //handle two activite after function complete
+        fun.then(() => {
+            console.log("i am first after function");
+        })
+        fun.then(() => {
+            console.log("i am second after function");
+        })
+    </script>
+</body>
+
+</html>

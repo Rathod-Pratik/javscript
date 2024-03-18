@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+</head>
+
+<body>
+    <script>
+        async function fun1() {
+            let a = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(20);
+                }, 3000);
+            });
+            let b = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(21);
+                }, 6000);
+            });
+
+            console.log("please wait for value of a...");
+            let a1 = await a
+            console.log("value of a is ", a1);
+            console.log("please wait for a value of b...")
+            let b1 = await b
+            console.log("value of b is ", b1);
+            return [a1, b1];
+        }
+        let fun2 = async () => {
+            console.log("i am second function");
+        }
+        async function fun3() {
+            let a = await fun1();
+            let b = await fun2();
+        }
+         fun3();
+        // let a=await fun1();
+        // a.then((value) => {
+        //     console.log(value);
+        // })
+    </script>
+</body>
+
+</html>

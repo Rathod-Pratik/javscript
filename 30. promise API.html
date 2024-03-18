@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API</title>
+</head>
+
+<body>
+    <script>
+        let a1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("First");
+            }, 2000);
+        })
+        let a2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject("second");
+            }, 4000);
+        })
+        let a3 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Thired");
+            }, 6000);
+        })
+
+        //if one promise reject give an error and not show other promises result
+        // let promise_all = Promise.all([a1, a2, a3]);
+
+        //if one promise reject show all result
+         let promise_all = Promise.allSettled([a1, a2, a3]);
+
+        //first resoved promise show first 
+        // let promise_all = Promise.race([a1, a2, a3]);
+
+        //first promise reoslve any of them
+        // let promise_all = Promise.any([a1, a2, a3]);
+
+        //use to print value
+        promise_all.then((value) => {
+            console.log(value);
+        })
+
+
+        //use to resolve promise
+         let promise = Promise.resolve(12);
+        //use to reject promise
+        // let promise = Promise.reject(12);
+
+        //use to print value
+        promise.then((value) => {
+            console.log(value);
+        })
+
+        // console.log(promise_all);
+    </script>
+</body>
+
+</html>

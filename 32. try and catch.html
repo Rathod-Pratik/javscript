@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try and catch</title>
+</head>
+<body>
+    <script>
+        //if the try is not work then catch handle an error
+        //try and catch work in squnence 
+        try {
+            rathod;
+        } catch (error) {
+              console.log("i am error moya moya");
+              console.log(error.name);
+              console.log(error.message);
+              console.log(error.stack);
+
+              //we can customise error just like it
+              let age=prompt("Enter your age :");
+              if(age>180){
+                // we can change error name visit it https://www.w3schools.com/jsref/prop_error_name.asp
+                 throw new SyntaxError("i am syntex error ");
+                // throw new ReferenceError("i am reference error ");
+              }
+        }
+    </script>
+</body>
+</html>

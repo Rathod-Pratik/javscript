@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post request</title>
+</head>
+<body>
+    <script>
+        const createTodo =async (todo)=>{
+            let options ={
+                method : "POST",
+                header :{
+                    "content-type": "application/json"
+                },body:JSON.stringify(todo),
+            }
+            let p=await fetch('https://jsonplaceholder.typicode.com/posts',options)
+            let response =await p.json()
+            return response;
+        }
+        const getTodo =async (id)=>{
+            let response =await fetch('https://jsonplaceholder.typicode.com/posts/'+ id)
+            let r=await response.json();
+            return r;
+        }
+        const mainfunc=async ()=>{
+            let todo ={
+                title:"harry2",
+                body:"bhai2",
+                userId:11,
+            }
+            let todor=await createTodo(todo)
+            console.log(todor);
+            console.log(await getTodo(1));
+        }
+        mainfunc();
+    </script>
+</body>
+</html>

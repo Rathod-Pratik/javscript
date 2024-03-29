@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <script>
+        // let a=prompt("enter your key :");
+        // let b=prompt("enter your value :");
+       let a= localStorage.setItem("Rathod","Pratik");
+
+       //clear localstorage 
+    //    localStorage.clear();
+
+       //find length of localstorage
+       console.log(localStorage.length);
+       
+       //remove item from local storage
+    //    localStorage.removeItem(a);
+       
+       //before console please insert key and value in prompt
+       console.log(localStorage.getItem("Rathod"));
+
+       //find index of localstorage
+       console.log(localStorage.key(0));
+    </script>
+</body>
+</html>

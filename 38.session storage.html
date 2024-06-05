@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session storage</title>
+</head>
+<body>
+    <h2>hello</h2>
+    <script>
+        //use to set session value and key
+        sessionStorage.setItem("Name","Rathod Pratik");
+
+        //use to get session item
+        console.log( sessionStorage.getItem("Name"));
+
+        //use to remove session item
+       sessionStorage.removeItem("Name");
+
+       //use to clear all item from session
+       sessionStorage.clear();
+
+    </script>
+</body>
+</html>

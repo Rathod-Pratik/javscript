@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proto type</title>
+</head>
+<body>
+    <script>
+        let object_1={
+            Name:"Rathod Pratik",
+            Course:"BCA",
+            a:()=>{
+                alert("im am function ")
+            }
+        }
+        console.log(object_1);
+        let object_2={
+          a:()=>{
+            console.log("i am second object ");
+          }
+        }
+
+        object_2.__proto__=object_1;
+
+        //if name not found in object-2 then it will find name in proto type here proto is object-1
+        console.log(object_2.Name);
+    </script>
+</body>
+</html>

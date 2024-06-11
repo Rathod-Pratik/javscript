@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes and object</title>
+</head>
+<body>
+    <script>
+        class railwayform{
+            booking(){
+                console.log(this.Name +" your ticket is booked with ticket number "+this.ticket_no);
+            }
+            cancel(){
+                console.log(this.Name +" your ticket is cancel with ticket number "+this.ticket_no);
+            }
+            data(name,ticket){
+                this.Name=name;
+                this.ticket_no=ticket;
+            }
+        }
+        let Pratik=new railwayform();
+        Pratik.data("Rathod Pratik",9016);
+
+        let Mohit=new railwayform();
+        Mohit.data("chauhan mohit",9017);
+
+        Pratik.booking();
+        Mohit.booking();
+        Mohit.cancel();
+    </script>
+</body>
+</html>

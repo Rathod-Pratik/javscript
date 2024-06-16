@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+</head>
+
+<body>
+    <script>
+        //in this method constructor will always call
+        class collegeform {
+            constructor(name, percentage, course) {
+                this.name = name;
+                this.percentage = percentage;
+                this.course = course;
+            }
+            check() {
+                alert(this.name + " your percentage is " + this.percentage + " your address is " + this.course);
+            }
+            
+            cancel(){
+                alert(this.name + " your admission for " + this.course+" is cancel");
+            }
+        }
+        let rahulform=new collegeform('Rathod Pratik',72.86,'BCA');
+
+        rahulform.check();
+        rahulform.cancel();
+    </script>
+</body>
+
+</html>
